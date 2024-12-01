@@ -9,6 +9,11 @@ public class WiseSaying {
 
     public WiseSaying(Long id, String content, String author) {
         this.id = id;
+        this.author = author;
+        this.content = content;
+    }
+
+    public WiseSaying(String content, String author) {
         this.content = content;
         this.author = author;
     }
@@ -39,7 +44,7 @@ public class WiseSaying {
 
     @Override
     public String toString(){
-        return String.format("%d / %s / %s\n", id, author, content);
+        return String.format("%d / %s / %s", id, author, content);
     }
 
     @Override
