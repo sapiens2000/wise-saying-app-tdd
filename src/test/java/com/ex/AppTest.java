@@ -62,14 +62,13 @@ class AppTest {
         Scanner sc = TestUtil.genScanner(cmd);
         ByteArrayOutputStream output = TestUtil.setOutToByteArray();
 
-
         App app = new App();
         app.run(sc);
 
         assertThat(output.toString())
                 .contains("명언 : ")
                 .contains("작가 : ")
-                .contains("1번 명언이 등록 되었습니다.");
+                .contains("1번 명언이 등록되었습니다.");
 
         TestUtil.clearSetOutToByteArray(output);
     }
