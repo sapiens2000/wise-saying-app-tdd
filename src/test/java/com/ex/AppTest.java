@@ -48,4 +48,30 @@ class AppTest {
 
         TestUtil.clearSetOutToByteArray(output);
     }
+
+    @DisplayName("3단계 테스트")
+    @Test
+    void step3(){
+        String cmd = """
+                등록
+                현재를 사랑하라.
+                작자미상
+                종료
+                """;
+
+        Scanner sc = TestUtil.genScanner(cmd);
+        ByteArrayOutputStream output = TestUtil.setOutToByteArray();
+
+
+        App app = new App();
+        app.run(sc);
+
+        assertThat(output.toString())
+                .contains("명언 : ")
+                .contains("작가 : ")
+                .contains("1번 명언이 등록 되었습니다.");
+
+        TestUtil.clearSetOutToByteArray(output);
+    }
+
 }
