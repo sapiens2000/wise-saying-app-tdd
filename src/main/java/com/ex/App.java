@@ -10,6 +10,7 @@ public class App {
 
     public void run(Scanner sc){
         System.out.println("== 명언 앱 ==");
+        Long id = 1L;
 
         while(true) {
             System.out.print("명령) ");
@@ -22,7 +23,7 @@ public class App {
                 System.out.print("작가 : ");
                 String author = sc.nextLine();
 
-                System.out.println("1번 명언이 등록되었습니다.");
+                System.out.println(id + "번 명언이 등록되었습니다.");
             }
             else if(cmd.equals("종료")){
                 break;
