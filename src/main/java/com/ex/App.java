@@ -23,6 +23,13 @@ public class App {
             if(cmd.equals("종료")){
                 break;
             }
+            else if(cmd.startsWith("삭제?")){
+                int idx = Integer.parseInt(cmd.split("=")[1]);
+                if(wiseSayings.get(idx) != null){
+                    wiseSayings.remove(idx);
+                    System.out.println(idx + "번 명언이 삭제되었습니다.");
+                }
+            }
             else if(cmd.equals("목록")){
                 System.out.println("번호 / 작가 / 명언");
                 System.out.println("----------------------");
